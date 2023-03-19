@@ -1,0 +1,8 @@
+{
+    "ID": "uEsRpnExbD",
+    "name": "Roomies",
+    "description": "This is a project that will change the world",
+    "createdIn": "Jan 2021",
+    "thumbnailSrc": "./fake",
+    "tags": ["Flutter", "Dart", "Firebase"]
+}
