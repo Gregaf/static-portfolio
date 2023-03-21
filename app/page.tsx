@@ -3,12 +3,13 @@ import { Inter } from "next/font/google";
 import styles from "./page.module.css";
 import fs from "fs";
 import Content from "./content.mdx";
+import MainPage from "./(components)/main-page";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default async function Home() {
   return (
-    <main className="bg-zinc-800 p-24 min-h-screen flex flex-col justify-between items-center">
+    <MainPage>
       <Content />
 
       <div className={styles.grid}>
@@ -52,6 +53,6 @@ export default async function Home() {
           </p>
         </a>
       </div>
-    </main>
+    </MainPage>
   );
 }
