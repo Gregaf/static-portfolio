@@ -21,7 +21,7 @@ export default async function PortfolioBoard() {
     <MainPage>
       <div>
         {projects.map((project) => {
-          return <ProjectCard key={project.ID} />;
+          return <ProjectCard key={project.ID} projectData={project} />;
         })}
       </div>
     </MainPage>
