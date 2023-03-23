@@ -19,7 +19,7 @@ export default async function PortfolioBoard() {
 
   return (
     <MainPage>
-      <div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {projects.map((project) => {
           return <ProjectCard key={project.ID} projectData={project} />;
         })}
