@@ -1,0 +1,14 @@
+ID: uEsRpnExbD
+name: Roomies
+description: |
+    A project I developed with a team of 3 other students. It is
+    a mobile application that aids in the process of living with
+    other roommates (e.g., message board, Chore tasking).
+createdIn: Jan 2021
+thumbnailSrc: /fake
+tags:
+  - Mobile Development
+  - Flutter
+  - Dart
+  - Firebase
+  - Git

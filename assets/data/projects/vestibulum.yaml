@@ -1,0 +1,13 @@
+ID: nkBZwot9LD
+name: Vestibulum
+description: |
+  A game developed for a course, along with 5 other students.
+  I presented the overall design and successfully led the development
+  of this project.
+createdIn: Fall 2015
+thumbnailSrc: /images/vestibulum.png
+tags:
+  - Game Development
+  - Unity3D
+  - Dotnet
+  - C#

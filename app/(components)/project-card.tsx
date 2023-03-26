@@ -1,7 +1,5 @@
-import { Inter } from "next/font/google";
+"use client";
 import Image from "next/image";
-
-const inter = Inter({ subsets: ["latin"] });
 
 interface TagProps {
   children: React.ReactNode;
@@ -9,7 +7,7 @@ interface TagProps {
 
 function Tag({ children }: TagProps) {
   return (
-    <div className="inline-block shadow-md my-1 mx-1 px-4 bg-slate-500 rounded-full">
+    <div className="inline-block shadow-md my-1 mx-1 px-4 bg-amber-500 rounded-full">
       {children}
     </div>
   );
@@ -26,15 +24,15 @@ export default function ProjectCard({ projectData }: ProjectCardProps) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="group transition py-4 px-5 rounded-xl bg-zinc-600 border-2 border-transparent hover:bg-teal-600">
-        <h2 style={inter.style}>
+      <div className="group transition duration-300 py-4 px-5 rounded-xl bg-slate-600 border-2 border-transparent hover:bg-rose-400">
+        <h2>
           {projectData.name} <span>-&gt;</span>
         </h2>
         <Image
           className="block mx-auto mt-2 border-2 border-white"
-          src="/placeholder-image.png"
-          alt="project img"
-          width={165}
+          src={projectData.thumbnailSrc}
+          alt={`Thumbnail for ${projectData.name}`}
+          width={310}
           height={165}
         />
         <p className="transition m-0 mt-2 opacity-60 group-hover:opacity-100">

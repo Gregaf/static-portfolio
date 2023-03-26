@@ -1,20 +1,14 @@
-import fs from 'fs'
-
-async function getData(id: string) {
-    const dataPath = process.cwd() + `/assets/data/${id}.json`; 
-  
-    const res = await fs.promises.readFile(dataPath, 'utf8');
-  
-    return JSON.parse(res);
-}
+import MainPage from "@/app/(components)/main-page";
+import ProjectTemplate from "./template.mdx";
 
 export default async function DynamicPage({ params }: any) {
-    const data = await getData(params.id);
-    
-    return (
-        <div>
-            <h1>{data.foo}</h1>
-            <h2>{data.lorem}</h2>
-        </div>
-    );
-}   
+  console.log(params);
+  // console.log(projectMap);
+  // console.log(projectMap.get(params.id));
+
+  return (
+    <MainPage>
+      <div></div>
+    </MainPage>
+  );
+}

@@ -1,7 +1,12 @@
+import MainPage from "../(components)/main-page";
+import AboutContent from "./about.mdx";
+
 export default async function About() {
   return (
-    <main className="container mx-auto">
-      <div>About</div>
-    </main>
+    <MainPage>
+      <div>
+        <AboutContent />
+      </div>
+    </MainPage>
   );
 }

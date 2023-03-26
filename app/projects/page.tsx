@@ -1,15 +1,18 @@
-import { LoadJsonData } from "@/utilities/data-loading";
+import {
+  LoadFileData,
+  LoadJSONData,
+  LoadYAMLData,
+} from "@/utilities/data-loading";
 import fs from "fs";
 import path from "path";
 import MainPage from "../(components)/main-page";
 import ProjectCard from "../(components)/project-card";
+import { PROJECT_DATA_PATH } from "@/types/projects-constants";
 
 async function getProjects(): Promise<Project[]> {
-  const dataPath = process.cwd() + `/assets/data/projects/`;
+  const files = await fs.promises.readdir(PROJECT_DATA_PATH);
 
-  const files = await fs.promises.readdir(dataPath);
-
-  const projects = await LoadJsonData<Project>(dataPath, files);
+  const projects = await LoadYAMLData<Project>(PROJECT_DATA_PATH, files);
 
   return projects;
 }
@@ -19,10 +22,16 @@ export default async function PortfolioBoard() {
 
   return (
     <MainPage>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        {projects.map((project) => {
-          return <ProjectCard key={project.ID} projectData={project} />;
-        })}
+      <div className="animate-fade">
+        <h1 className="mb-2 text-4xl font-bold text-center lg:text-left">
+          Projects
+        </h1>
+        <hr className="mb-6" />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {projects.map((project) => {
+            return <ProjectCard key={project.ID} projectData={project} />;
+          })}
+        </div>
       </div>
     </MainPage>
   );

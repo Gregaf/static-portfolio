@@ -1,7 +1,4 @@
-import { Roboto } from "next/font/google";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-
-const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 
 interface NavLinkProps {
   children: React.ReactNode;
@@ -12,8 +9,7 @@ function NavLink({ href, children }: NavLinkProps) {
   return (
     <a
       href={href}
-      className="transition duration-250 lg:inline-block text-amber-50 hover:text-amber-300"
-      style={roboto.style}
+      className="transition duration-250 lg:inline-block text-rose-50 hover:text-rose-300"
     >
       {children}
     </a>
@@ -22,7 +18,7 @@ function NavLink({ href, children }: NavLinkProps) {
 
 export default function Navbar() {
   return (
-    <nav className="px-4 py-4 flex items-center justify-between bg-zinc-700 p-6">
+    <nav className="px-4 py-4 flex items-center justify-between bg-slate-700 p-6">
       <div className="flex items-center">
         <a className="mr-3" href="/">
           <svg className="h-10" viewBox="0 0 10240 10240">
@@ -32,9 +28,7 @@ export default function Navbar() {
             ></path>
           </svg>
         </a>
-        <div className="tracking-widest" style={roboto.style}>
-          Gregory Freitas
-        </div>
+        <div className="tracking-widest">Gregory Freitas</div>
       </div>
       <div className="relative flex items-center">
         <ul className="lg:flex lg:flex lg:items-end lg:w-auto lg:space-x-6">

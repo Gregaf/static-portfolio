@@ -4,14 +4,16 @@ import styles from "./page.module.css";
 import fs from "fs";
 import Content from "./content.mdx";
 import MainPage from "./(components)/main-page";
+import db from "@/sqlite3/db";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default async function Home() {
+  db.get("SELECT * FROM articles", (_, res) => console.log(res));
+
   return (
     <MainPage>
       <Content />
-
       <div className={styles.grid}>
         <a
           href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

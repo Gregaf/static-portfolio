@@ -1,0 +1,1 @@
+export const PROJECT_DATA_PATH: string = process.cwd() + `/assets/data/projects/`;
